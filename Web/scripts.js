@@ -1,14 +1,17 @@
 $(function () {
 
-    $(beteenden).each(function (index, beteende) {
+    $(behaviorCards).each(function (index, card) {
         var cardHtml = `
-            <div class="card ${beteende.InCollectionOfIntroCards ? 'InCollectionOfIntroCards' : ''}">
+            <div class="card ${card.InCollectionOfIntroCards ? 'InCollectionOfIntroCards' : ''}">
                 <div class="cardFrame">
                     <div class="cardTitle">
-                    ${beteende.Id}. ${beteende.Title}
+                        ${card.Title}
                     </div>
-                    <div>
-                        ${beteende.Description}
+                    <div class="cardDescription">
+                        ${card.Description}
+                    </div>
+                    <div class="cardId">
+                        (${card.Id})
                     </div>
                 </div>
             </div>`;
