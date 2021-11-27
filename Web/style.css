@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(250, 222, 171)
+}
+.card{
+    background-color: white;
+    color: rgb(255, 115, 0);  
+    font-family: Arial, Helvetica, sans-serif;  
+    margin: 5px;
+    padding: 5px;
+    width: 250px;
+   border-radius: 10px;
+}
+
+.cardFrame {
+    margin: 5px;
+    padding: 30 5;
+   border-color: rgb(255, 115, 0); 
+   border-width: 2px;
+   border-style: solid;
+   border-radius: 8px; 
+   text-align: center;
+}
+
+.cardTitle {
+    text-transform: uppercase;
+    font-weight: bold;
+}

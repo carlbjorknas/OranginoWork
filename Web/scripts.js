@@ -1,13 +1,31 @@
-$(function(){
-    console.log(beteenden)
+$(function () {
 
-    var $accordion = $('#accordion')
+    $(beteenden).each(function (index, beteende) {
+        var cardHtml = `
+            <div class="card ${beteende.InCollectionOfIntroCards ? 'InCollectionOfIntroCards' : ''}">
+                <div class="cardFrame">
+                    <div class="cardTitle">
+                    ${beteende.Id}. ${beteende.Title}
+                    </div>
+                    <div>
+                        ${beteende.Description}
+                    </div>
+                </div>
+            </div>`;
 
-    $(beteenden).each(function(index, beteende){
-        $accordion
-            .append('<b>' + beteende.Id + ' ' + beteende.Title + '</b> - ' + beteende.Description + '</br>')
-           // .append(  + '</p>')
+        $('body').append(cardHtml);
     })
+
+
+    //console.log(beteenden)
+
+    //var $accordion = $('#accordion')
+
+    //$(beteenden).each(function(index, beteende){
+    //    $accordion
+    //        .append('<b>' + beteende.Id + ' ' + beteende.Title + '</b> - ' + beteende.Description + '</br>')
+    //       // .append(  + '</p>')
+    //})
 
     // $(beteenden).each(function(index, beteende){
     //     $accordion
